@@ -1,0 +1,37 @@
+aid: focus-spec
+name: FOCUS (FinOps Open Cost and Usage Specification)
+description: >-
+  FOCUS is an open standard for cloud cost and usage data providing consistent
+  billing data across cloud providers and SaaS products.
+type: Index
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - FinOps
+  - Specification
+url: >-
+  https://raw.githubusercontent.com/api-evangelist/focus-spec/refs/heads/main/apis.yml
+created: '2026-03-27'
+modified: '2026-03-27'
+specificationVersion: '0.19'
+apis:
+  - aid: focus-spec:focus-spec
+    name: FOCUS (FinOps Open Cost and Usage Specification)
+    description: >-
+      FOCUS is an open standard for cloud cost and usage data providing
+      consistent billing data across cloud providers and SaaS products.
+    humanURL: https://focus.finops.org/
+    tags:
+      - FinOps
+    properties:
+      - type: Documentation
+        url: https://focus.finops.org/
+      - type: Getting Started
+        url: https://focus.finops.org/
+common:
+  - type: Website
+    url: https://focus.finops.org/
+  - type: Documentation
+    url: https://focus.finops.org/
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
