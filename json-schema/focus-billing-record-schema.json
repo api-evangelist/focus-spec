@@ -1,0 +1,229 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/focus-spec/refs/heads/main/json-schema/focus-billing-record-schema.json",
+  "title": "FOCUS Billing Record",
+  "description": "JSON Schema representation of a single row in a FOCUS-conformant billing dataset. FOCUS (FinOps Open Cost and Usage Specification) is an open standard maintained under the FinOps Foundation that normalizes cost and usage data across cloud, SaaS, data center, and other technology vendors. This schema lists the normative columns defined by the FOCUS specification and reflects the column attributes (data type, nullability, requirement level) defined in the FOCUS data model. The full normative definitions live at https://focus.finops.org/ and in the FOCUS_Spec repository.",
+  "type": "object",
+  "additionalProperties": true,
+  "properties": {
+    "AvailabilityZone": {
+      "type": ["string", "null"],
+      "description": "Provider-assigned identifier for an isolated location within a region."
+    },
+    "BilledCost": {
+      "type": "number",
+      "description": "Amount on the invoice for the billing period before amortization, in BillingCurrency."
+    },
+    "BillingAccountId": {
+      "type": "string",
+      "description": "Provider-assigned identifier for the account that receives the invoice."
+    },
+    "BillingAccountName": {
+      "type": ["string", "null"],
+      "description": "Display name for the BillingAccountId."
+    },
+    "BillingCurrency": {
+      "type": "string",
+      "description": "ISO 4217 currency code in which costs are denominated."
+    },
+    "BillingPeriodEnd": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Exclusive end of the billing period."
+    },
+    "BillingPeriodStart": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Inclusive start of the billing period."
+    },
+    "ChargeCategory": {
+      "type": "string",
+      "enum": ["Usage", "Purchase", "Tax", "Credit", "Adjustment"],
+      "description": "Highest-level classification of a charge."
+    },
+    "ChargeClass": {
+      "type": ["string", "null"],
+      "enum": ["Correction", null],
+      "description": "Indicates whether a charge represents a correction to a previously invoiced billing period."
+    },
+    "ChargeDescription": {
+      "type": ["string", "null"],
+      "description": "Provider-supplied human-readable summary of the charge."
+    },
+    "ChargeFrequency": {
+      "type": ["string", "null"],
+      "enum": ["One-Time", "Recurring", "Usage-Based", null],
+      "description": "Frequency at which a charge is incurred."
+    },
+    "ChargePeriodEnd": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Exclusive end of the period over which the charge was incurred."
+    },
+    "ChargePeriodStart": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Inclusive start of the period over which the charge was incurred."
+    },
+    "CommitmentDiscountCategory": {
+      "type": ["string", "null"],
+      "enum": ["Spend", "Usage", null],
+      "description": "Whether a commitment-based discount is denominated in spend or usage units."
+    },
+    "CommitmentDiscountId": {
+      "type": ["string", "null"],
+      "description": "Provider-assigned identifier for the commitment-based discount applied to the charge."
+    },
+    "CommitmentDiscountName": {
+      "type": ["string", "null"],
+      "description": "Display name for the CommitmentDiscountId."
+    },
+    "CommitmentDiscountStatus": {
+      "type": ["string", "null"],
+      "enum": ["Used", "Unused", null],
+      "description": "Whether the commitment-based discount was used or unused for the charge."
+    },
+    "CommitmentDiscountType": {
+      "type": ["string", "null"],
+      "description": "Provider-defined type of commitment-based discount (e.g. Reserved Instance, Savings Plan)."
+    },
+    "ConsumedQuantity": {
+      "type": ["number", "null"],
+      "description": "Volume of a metered service consumed, in ConsumedUnit."
+    },
+    "ConsumedUnit": {
+      "type": ["string", "null"],
+      "description": "Provider-defined unit of measurement for ConsumedQuantity."
+    },
+    "ContractedCost": {
+      "type": "number",
+      "description": "Cost based on negotiated rates excluding negotiated discounts, in BillingCurrency."
+    },
+    "ContractedUnitPrice": {
+      "type": ["number", "null"],
+      "description": "Per-unit price at negotiated rates, in BillingCurrency per PricingUnit."
+    },
+    "EffectiveCost": {
+      "type": "number",
+      "description": "Amortized cost of the charge after applying upfront and recurring commitment fees, in BillingCurrency."
+    },
+    "InvoiceIssuerName": {
+      "type": "string",
+      "description": "Entity responsible for invoicing the consumer."
+    },
+    "ListCost": {
+      "type": "number",
+      "description": "Cost based on public list prices, in BillingCurrency."
+    },
+    "ListUnitPrice": {
+      "type": ["number", "null"],
+      "description": "Per-unit price at public list rates, in BillingCurrency per PricingUnit."
+    },
+    "PricingCategory": {
+      "type": ["string", "null"],
+      "enum": ["Standard", "Dynamic", "Committed", "Other", null],
+      "description": "Pricing model used to compute the cost of the charge."
+    },
+    "PricingQuantity": {
+      "type": ["number", "null"],
+      "description": "Quantity priced for this charge, in PricingUnit."
+    },
+    "PricingUnit": {
+      "type": ["string", "null"],
+      "description": "Provider-defined unit of measurement used for pricing."
+    },
+    "ProviderName": {
+      "type": "string",
+      "description": "Entity providing the resources or services."
+    },
+    "PublisherName": {
+      "type": "string",
+      "description": "Entity that produced the resources or services."
+    },
+    "RegionId": {
+      "type": ["string", "null"],
+      "description": "Provider-assigned identifier for an isolated geographic area."
+    },
+    "RegionName": {
+      "type": ["string", "null"],
+      "description": "Display name for the RegionId."
+    },
+    "ResourceId": {
+      "type": ["string", "null"],
+      "description": "Provider-assigned identifier for a billable resource."
+    },
+    "ResourceName": {
+      "type": ["string", "null"],
+      "description": "Display name of the ResourceId."
+    },
+    "ResourceType": {
+      "type": ["string", "null"],
+      "description": "Provider-defined type of resource."
+    },
+    "ServiceCategory": {
+      "type": "string",
+      "description": "FOCUS top-level service category (e.g. Compute, Storage, Networking, AI and Machine Learning)."
+    },
+    "ServiceName": {
+      "type": "string",
+      "description": "Provider-defined service name."
+    },
+    "ServiceSubcategory": {
+      "type": ["string", "null"],
+      "description": "FOCUS service subcategory within the parent ServiceCategory."
+    },
+    "SkuId": {
+      "type": ["string", "null"],
+      "description": "Provider-assigned identifier for the SKU charged."
+    },
+    "SkuMeter": {
+      "type": ["string", "null"],
+      "description": "Provider-defined description of what is metered by the SKU."
+    },
+    "SkuPriceDetails": {
+      "type": ["object", "null"],
+      "description": "Structured object capturing additional pricing attributes specific to the SKU."
+    },
+    "SkuPriceId": {
+      "type": ["string", "null"],
+      "description": "Provider-assigned identifier for the SKU's specific price."
+    },
+    "SubAccountId": {
+      "type": ["string", "null"],
+      "description": "Provider-assigned identifier for a sub-account, project, or grouping below the BillingAccountId."
+    },
+    "SubAccountName": {
+      "type": ["string", "null"],
+      "description": "Display name for the SubAccountId."
+    },
+    "Tags": {
+      "type": ["object", "null"],
+      "description": "Set of user- or provider-defined tag key/value pairs applied to the charge.",
+      "additionalProperties": {
+        "type": ["string", "number", "boolean", "null"]
+      }
+    },
+    "x_CostCategory": {
+      "type": ["string", "null"],
+      "description": "Implementation-defined extension column. FOCUS reserves the x_ prefix for non-normative provider extensions."
+    }
+  },
+  "required": [
+    "BilledCost",
+    "BillingAccountId",
+    "BillingCurrency",
+    "BillingPeriodEnd",
+    "BillingPeriodStart",
+    "ChargeCategory",
+    "ChargePeriodEnd",
+    "ChargePeriodStart",
+    "ContractedCost",
+    "EffectiveCost",
+    "InvoiceIssuerName",
+    "ListCost",
+    "ProviderName",
+    "PublisherName",
+    "ServiceCategory",
+    "ServiceName"
+  ]
+}
