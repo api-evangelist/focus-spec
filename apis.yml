@@ -47,7 +47,7 @@ apis:
     properties:
       - type: Documentation
         url: https://focus.finops.org/
-      - type: Getting Started
+      - type: GettingStarted
         url: https://focus.finops.org/focus-getting-started/
       - type: GitHubRepository
         url: https://github.com/FinOps-Open-Cost-and-Usage-Spec/FOCUS_Spec
