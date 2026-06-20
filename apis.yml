@@ -13,7 +13,7 @@ description: >-
   those exports against the published column library, data model, and
   validator.
 type: Index
-image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 url: >-
   https://raw.githubusercontent.com/api-evangelist/focus-spec/refs/heads/main/apis.yml
 created: '2026-03-27'
@@ -38,7 +38,7 @@ apis:
       record so that data consumers and integrators can validate
       individual rows produced by FOCUS-aligned exports.
     humanURL: https://focus.finops.org/
-    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     tags:
       - FinOps
       - Specification
