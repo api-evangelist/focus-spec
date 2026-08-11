@@ -68,6 +68,12 @@ apis:
       - type: JSONSchema
         url: json-schema/focus-billing-record-schema.json
 common:
+  - type: IssueTracker
+    url: https://github.com/FinOps-Open-Cost-and-Usage-Spec/FOCUS_Spec/issues
+  - type: Releases
+    url: https://github.com/FinOps-Open-Cost-and-Usage-Spec/FOCUS_Spec/releases
+  - type: ContributionGuide
+    url: https://github.com/FinOps-Open-Cost-and-Usage-Spec/FOCUS_Spec/blob/working_draft/CONTRIBUTING.md
   - type: DomainSecurity
     url: security/focus-spec-domain-security.yml
   - type: Website
