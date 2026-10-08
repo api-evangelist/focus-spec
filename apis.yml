@@ -83,6 +83,12 @@ apis:
       - type: JSONSchema
         url: json-schema/focus-billing-record-schema.json
 common:
+  - type: Plans
+    url: plans/focus-spec-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/focus-spec-rate-limits.yml
+  - type: FinOps
+    url: finops/focus-spec-finops.yml
   - type: IssueTracker
     url: https://github.com/FinOps-Open-Cost-and-Usage-Spec/FOCUS_Spec/issues
   - type: Releases
