@@ -1,4 +1,4 @@
-# FOCUS Specification (focus-spec)
+# FOCUS (FinOps Open Cost and Usage Specification)
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,52 +64,115 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-FOCUS, the FinOps Open Cost and Usage Specification, is an open standard maintained under the FinOps Foundation that normalizes cost and usage data across cloud, SaaS, data center, and other technology vendors. FOCUS defines a common data schema, a controlled vocabulary of column names, allowed values, and pricing attributes so that practitioners can apply a consistent set of FinOps practices regardless of which provider generated the underlying billing dataset.
+FOCUS, the FinOps Open Cost and Usage Specification, is an open standard maintained under the FinOps Foundation that normalizes cost and usage data across cloud, SaaS, data center, and other technology vendors. FOCUS defines a common data schema, a controlled vocabulary of column names, allowed values, and pricing attributes so that practitioners can apply a consistent set of FinOps practices regardless of which provider generated the underlying billing dataset. FOCUS is purely a data specification rather than a REST API; conforming providers expose exports of their billing data in the FOCUS format, and tooling consumes those exports against the published column library, data model, and validator.
 
-FOCUS is purely a data specification rather than a REST API. Conforming providers expose exports of their billing data in the FOCUS format, and tooling consumes those exports against the published column library, data model, and validator.
+**Areas:** Billing · Cost and Usage · FinOps · Open Standard · Specification
 
-**URL:** [Visit APIs.json URL](https://raw.githubusercontent.com/api-evangelist/focus-spec/refs/heads/main/apis.yml)
+## FOCUS (FinOps Open Cost and Usage Specification) on APIs.io
 
-## Scope
+Everything profiled for FOCUS (FinOps Open Cost and Usage Specification) is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/focus-spec/](https://apis.io/providers/focus-spec/)** — or go straight to one of the APIs or properties below.
 
-- **Type:** Index
-- **Position:** Producing
-- **Access:** 3rd-Party
+### APIs (1)
 
-## Tags
+- [FOCUS (FinOps Open Cost and Usage Specification)](https://apis.io/apis/focus-spec/focus-spec/) — FOCUS defines a common normalized data schema for cloud and technology billing data. The specification is delivered as a set of normative documents and…
 
-- Billing
-- Cost and Usage
-- FinOps
-- Open Standard
-- Specification
+### Published properties
 
-## APIs
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-### FOCUS Specification
+#### JSON Schema (1)
 
-FOCUS does not expose a REST API. The artifact tracked by this repository is a JSON Schema representation of a single FOCUS-conformant billing record, derived from the column attributes defined in the FOCUS specification. The schema lists the normative columns (BilledCost, EffectiveCost, ContractedCost, ListCost, BillingAccountId, BillingCurrency, ChargeCategory, ChargePeriodStart/End, ProviderName, PublisherName, ServiceName, ServiceCategory, etc.) and reflects the allowed values, nullability, and requirement levels documented in the FOCUS data model.
+The data models the API reads and writes.
 
-- **Specification Site:** [https://focus.finops.org/](https://focus.finops.org/)
-- **Getting Started:** [https://focus.finops.org/focus-getting-started/](https://focus.finops.org/focus-getting-started/)
-- **GitHub Repository:** [https://github.com/FinOps-Open-Cost-and-Usage-Spec/FOCUS_Spec](https://github.com/FinOps-Open-Cost-and-Usage-Spec/FOCUS_Spec)
-- **JSON Schema:** [json-schema/focus-billing-record-schema.json](json-schema/focus-billing-record-schema.json)
+- [FOCUS Billing Record](https://apis.io/schemas/focus-spec/focus-billing-record/)
 
-## Common Properties
+#### Governance rules (1)
+
+Spectral rulesets for the provider's contracts.
+
+- [FOCUS (FinOps Open Cost and Usage Specification) — jsonschema rules](https://apis.io/rules/focus-spec/focus-spec-jsonschema-spectral-rules/)
+
+#### Security (1)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Focus Spec Domain Security](https://apis.io/security/focus-spec/focus-spec-domain-security/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Focus Spec Plans Pricing](https://apis.io/plans/focus-spec/focus-spec-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Focus Spec Rate Limits](https://apis.io/rate-limits/focus-spec/focus-spec-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Focus Spec Finops](https://apis.io/finops/focus-spec/focus-spec-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://focus.finops.org/)
 - [Documentation](https://focus.finops.org/)
-- [GitHub Repository](https://github.com/FinOps-Open-Cost-and-Usage-Spec/FOCUS_Spec)
-- [GitHub Organization](https://github.com/FinOps-Open-Cost-and-Usage-Spec)
-- [JSON Schema](json-schema/focus-billing-record-schema.json)
+- [GitHub](https://github.com/FinOps-Open-Cost-and-Usage-Spec)
 
-## Timestamps
+## API Evangelist rating
 
-- **Created:** 2026-03-27
-- **Modified:** 2026-04-28
+**Kin Score 14.2** — emerging · rubric 0.24.0 · scored 2026-10-17
 
-## Maintainers
+| Facet | Score |
+|---|---|
+| Discoverability | 57.1 |
+| Contract quality | 7.2 |
+| Contract governance | 9.8 |
+| Operational transparency | 26.3 |
+| Developer ergonomics | 9.5 |
+| Access clarity | 7.9 |
 
-**FN:** Kin Lane
+**Agent readiness 0.6** — human-only
 
-**Email:** kin@apievangelist.com
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 5.9** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/focus-spec/](https://apis.io/providers/focus-spec/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for FOCUS (FinOps Open Cost and Usage Specification): the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/focus-spec/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
